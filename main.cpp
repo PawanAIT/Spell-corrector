@@ -58,7 +58,7 @@ void SpellingCorrector::load(const string& filename)
   }
   */
 
-	FILE *fp=fopen("random.txt","r");
+	FILE *fp=fopen("big.txt","r");
 	char str[1000];
 	string ss;
 	while(fscanf(fp,"%s",str) != EOF)
