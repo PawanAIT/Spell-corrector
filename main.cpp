@@ -33,31 +33,6 @@ char filterNonAlphabetic(char& letter)
 
 void SpellingCorrector::load(const string& filename)
 {
- /* ifstream file(filename.c_str(), ios_base::binary | ios_base::in);
-
-  file.seekg(0, ios_base::end);
-  streampos length = file.tellg();
-  file.seekg(0, ios_base::beg);
-
-  string data(static_cast<size_t>(length), '\0');
-
-  file.read(&data[0], length);
-
-  transform(data.begin(), data.end(), data.begin(), filterNonAlphabetic);
-
-  for (string::size_type i = 0; i != string::npos;)
-  {
-    const string::size_type firstNonFiltered = data.find_first_not_of('-', i + 1);
-    if (firstNonFiltered == string::npos)
-      break;
-
-    const string::size_type end = data.find('-', firstNonFiltered);
-    dictionary[data.substr(firstNonFiltered, end - firstNonFiltered)]++;
-   // cout<<data.substr(firstNonFiltered, end - firstNonFiltered)<<endl;
-    i = end;
-  }
-  */
-
 	FILE *fp=fopen("big.txt","r");
 	char str[1000];
 	string ss;
